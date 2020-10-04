@@ -2,7 +2,7 @@
 
 An implementation of Differential Calculus to illustrate symbol manipualtion and data abstraction.
 
-## Differentiation with abstract data
+### Differentiation with abstract data
 We first define a differentiation algorithm that operates on abstract objects such as “sums,” “products,” and “variables” without worrying about how these
 are to be represented.
 
@@ -17,3 +17,11 @@ To construct these rules, we assume that we have a _means_ for expressing algebr
 * We can determine if an expression is a sum, a product, a constant or a variable.
 * We can extract parts of the expression.
 * We can construct expressions from these parts.
+
+### Writing the `deriv` procedure
+`deriv` takes as arguments a variable `var` with respect to which we evaluate the expression `exp`
+
+`(define (deriv exp var) ... `
+
+Let us begin a case analysis, of each rule, for building a recursive solution - 
+#### Rule 1
