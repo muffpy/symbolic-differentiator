@@ -8,6 +8,7 @@ are to be represented.
 
 The following reduction rules can be applied to differentiate any algebraic sum or product:
 
+![Image of rules](diff_rules.png)
 
 
 
