@@ -56,3 +56,21 @@ If the expression is a product, then return the sum of the derivatives of the **
             (make-product (deriv (multiplier exp) var)
               (multiplicand exp))))
         
+Combining it all:
+```
+(define (deriv exp var)
+       (cond ((constant? exp) 0)
+              ((same-variable? exp var) 1))
+              ((sum? exp) (make-sum (deriv (addend exp) var)
+                                    (deriv (augend exp) var)))
+              ((product? exp)
+                 (make-sum
+                   (make-product (multiplier exp)
+                     (deriv (multiplicand exp) var))
+                   (make-product (deriv (multiplier exp) var)
+                     (multiplicand exp))))
+              (else
+                  (error "unknown expression type" exp))))
+```
+
+
