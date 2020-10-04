@@ -55,7 +55,8 @@ If the expression is a product, then return the sum of the derivatives of the **
               (deriv (multiplicand exp) var))
             (make-product (deriv (multiplier exp) var)
               (multiplicand exp))))
-        
+```
+
 Combining it all:
 ```
 (define (deriv exp var)
