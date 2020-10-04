@@ -8,7 +8,7 @@ are to be represented.
 
 The following reduction rules can be applied to differentiate any algebraic sum or product:
 
-<img src= "diff_rules.png" width=650 height=350>
+<img src= "diff_rules.png" width=550 height=270>
 
 
 > Clearly, the last two rules are **reductions** becuase each derivate produces two more derivatives which can be decomposed into smaller pieces, and thus can be solved by **recursion**.
