@@ -53,6 +53,6 @@ The final procedure:
 ```
 
 
-The important idea is that we have encapsulated all these rules without bothering about the representation of algebraic expressions and built a procedure by esssentially assuming these rules are given to us. Once these rules are decided, we figure out the representation of the expressions.
+The important idea is that we have encapsulated all these rules without bothering about the representation of algebraic expressions and built a procedure by esssentially assuming we have procedures like (sum?), (same-variable?), (product?) etc. Once these rules are decided, we figure out the representation of the expressions.
 
 ## Representing expressions
