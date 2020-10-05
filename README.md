@@ -24,19 +24,8 @@ To construct these rules, we assume that we have a _means_ for expressing algebr
 ```
 (define (deriv exp var) ... 
 ```
+A case analysis must be done for building a recursive solution. For example:
 
-Let us begin a case analysis, of each rule, for building a recursive solution - 
-#### Rule 1
-If the expression is a constant _with respect_ to the varaible, return 0
-```
-(cond ((constant? exp var) 0) ...)
-```
-#### Rule 2
-If the expression is the variable which is get varied, return 1
-```
-(cond ((...)
-       ((same-variable? exp var) 1) ...)
-```
 #### Rule 3
 If the expression is a sum, then return the sum of the derivatives of the **addend** and the **augend**
 ```
@@ -45,19 +34,8 @@ If the expression is a sum, then return the sum of the derivatives of the **adde
                               (deriv (augend exp) var)))
                               ...)
 ```
-#### Rule 4
-If the expression is a product, then return the sum of the derivatives of the **multiplier** and the **multiplicand**
-```
-(cond ((... ))
-      ((product? exp)
-          (make-sum
-            (make-product (multiplier exp)
-              (deriv (multiplicand exp) var))
-            (make-product (deriv (multiplier exp) var)
-              (multiplicand exp))))
-```
 
-Combining it all:
+The final procedure: 
 ```
 (define (deriv exp var)
        (cond ((constant? exp) 0)
