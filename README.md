@@ -1,8 +1,8 @@
 # Symbolic Differentiator
 
-An implementation of Differential Calculus to illustrate symbol manipualtion and data abstraction.
+An implementation of Differential Calculus to illustrate symbol manipulation and data abstraction.
 
-### Differentiation with abstract data
+## Differentiation with abstract data
 We first define a differentiation algorithm that operates on abstract objects such as “sums,” “products,” and “variables” without worrying about how these
 are to be represented.
 
@@ -75,3 +75,6 @@ Combining it all:
 ```
 
 
+The important idea is that we have encapsulated all these rules without bothering about the representation of algebraic expressions and built a procedure by esssentially assuming these rules are given to us. Once these rules are decided, we figure out the representation of the expressions.
+
+## Representing expressions
