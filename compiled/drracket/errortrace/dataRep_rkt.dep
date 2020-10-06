@@ -1,0 +1,1 @@
+("7.7" racket ("875784798e9e27695368b648a30bab05c03fa5a7" . "4aef1fd35671d8b47fab62a7f3edf1ce849a2b02") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"gui" #"lang" #"reader.rkt") (collects #"racket" #"gui.rkt") (collects #"racket" #"runtime-config.rkt"))
