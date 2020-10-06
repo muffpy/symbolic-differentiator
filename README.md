@@ -67,6 +67,45 @@ Racket uses parenthesized prefix notation for combinations, example `(+ (* x y) 
 (define (multiplicand p) (caddr p))
 ```
 The rest of them are in dataRep.rkt
+
 ---------------------------------------------------
 
+## Efficient construction
+Looking at the behaviour of `deriv`:
+```
+> (define foo    ;; ax^2+bx+c
+  '(+ (* a (* x x))
+      (+ (* b x)
+         c)))
+> (deriv foo 'x) ;; derivative of foo with respect to x
+'(+
+  (+ (* a (+ (* x 1) (* 1 x))) (* 0 (* x x)))
+  (+ (+ (* b 1) (* 0 x)) 0))
+```
+This is albeit correct but clearly an unsimplified mess. To fix this, we remember that the derivative rules are _abstracted_ away from the representation of the expressions by interface procedures such as `constant?`, `make-sum`, `product?` and so on. Thus, we can change the constructords and selectors without changing `deriv`.
+
+While making a sum, that if both summands are numbers, make-sum will add them and return their sum. Also, if one of the summands is 0, then make-sum will return the other summand - 
+```
+(define (make-sum a1 a2)
+        (cond ((=number? a1 0) a2)
+              ((=number? a2 0) a1)
+              ((and (number? a1) (number? a2))
+               (+ a1 a2))
+              (else (list '+ a1 a2))))
+
+```
+
+Similarly, we will change make-product to build in the rules that `0 times $x = 0` and `1 * $x = x`:
+```
+(define (make-product m1 m2)
+        (cond ((or (=number? m1 0) (=number? m2 0)) 0)
+              ((=number? m1 1) m2)
+              ((=number? m2 1) m1)
+              ((and (number? m1) (number? m2)) (* m1 m2))
+              (else (list '* m1 m2))))
+
+```
+Both use `=number?` which checks if the expression is equal to a given number and is defined in dataRep.rkt
+
 ## Handling exponenets
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
