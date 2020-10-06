@@ -100,5 +100,16 @@ To extend  the differentiator to handle more rules such as the power rule:
 
 <img src="CodeCogsEqn.gif">
 
-We define more interface procedures :smile:
-As apparent from the equation above, the expression is a reduction into a product and can therefore be defined recursively - 
+We define more interface procedures :smile:.
+And as apparent from the equation above, the expression is a reduction into a product and can therefore be defined recursively - 
+```
+((exponentiation? exp) 
+          (make-product  
+               (make-product (exponent exp)  
+                      (make-exponentiation (base exp)  
+                            (if (number? (exponent exp))  ;; check that exponent is not an variable as otherwise the power rule wouldn't apply  
+                                 (- (exponent exp) 1) 
+                                 (' (- (exponent exp) 1))))) 
+               (deriv  (base exp) var)))
+```
+Like products and sums, the definition is written assuming `base`, `exponent`, `exponentiation?` and `make-exponentiation` are defined (in dataRep.rkt :wink:)
