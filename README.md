@@ -82,7 +82,7 @@ Looking at the behaviour of `deriv`:
   (+ (* a (+ (* x 1) (* 1 x))) (* 0 (* x x)))
   (+ (+ (* b 1) (* 0 x)) 0))
 ```
-This is albeit correct but clearly an unsimplified mess. To fix this, we remember that the derivative rules are _abstracted_ away from the representation of the expressions by interface procedures such as `constant?`, `make-sum`, `product?` and so on. Thus, we can change the constructords and selectors without changing `deriv`.
+This is albeit correct but clearly an unsimplified mess. To fix this, we remember that the derivative rules are _abstracted_ away from the representation of the expressions by interface procedures such as `constant?`, `make-sum`, `product?` and so on. Thus, we can change the constructors and selectors without changing `deriv`.
 
 While making a sum, that if both summands are numbers, make-sum will add them and return their sum. Also, if one of the summands is 0, then make-sum will return the other summand - 
 ```
@@ -95,7 +95,7 @@ While making a sum, that if both summands are numbers, make-sum will add them an
 
 ```
 
-Similarly, we will change make-product to build in the rules that `0 times $x = 0` and `1 * $x = x`:
+Similarly, we will change make-product to build in the rules that `0 times $x = 0` and `1 times $x = x`:
 ```
 (define (make-product m1 m2)
         (cond ((or (=number? m1 0) (=number? m2 0)) 0)
