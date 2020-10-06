@@ -112,4 +112,6 @@ And as apparent from the equation above, the expression is a reduction into a pr
                                  (' (- (exponent exp) 1))))) 
                (deriv  (base exp) var)))
 ```
-Like products and sums, the definition is written assuming `base`, `exponent`, `exponentiation?` and `make-exponentiation` are defined (in dataRep.rkt :wink:)
+Like products and sums, the definition is written assuming `base`, `exponent`, `exponentiation?` and `make-exponentiation` are defined. The next step is to actually write them! (check dataRep.rkt :wink:)
+
+## Infix notation
