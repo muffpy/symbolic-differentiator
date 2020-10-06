@@ -67,3 +67,6 @@ Racket uses parenthesized prefix notation for combinations, example `(+ (* x y) 
 (define (multiplicand p) (caddr p))
 ```
 The rest of them are in dataRep.rkt
+---------------------------------------------------
+
+## Handling exponenets
