@@ -66,7 +66,7 @@ Racket uses parenthesized prefix notation for combinations, example `(+ (* x y) 
 (define (multiplier p) (cadr p))
 (define (multiplicand p) (caddr p))
 ```
-The rest of them are in dataRep.rkt
+The rest of them are in ![/dataRenp.rkt]dataRep.rkt
 
 ---------------------------------------------------
 
@@ -93,7 +93,7 @@ While making a sum, that if both summands are numbers, make-sum will add them an
                (+ a1 a2))
               (else (list '+ a1 a2))))
 ```
-`make-product` is also defined accordingly. Both use `=number?` which checks if the expression is equal to a given number and is defined in dataRep.rkt
+`make-product` is also defined accordingly. Both use `=number?` which checks if the expression is equal to a given number and is defined in ![/dataRenp.rkt]dataRep.rkt
 
 ## Handling exponenets
 To extend  the differentiator to handle more rules such as the power rule: 
@@ -112,6 +112,6 @@ And as apparent from the equation above, the expression is a reduction into a pr
                                  (' (- (exponent exp) 1))))) 
                (deriv  (base exp) var)))
 ```
-Like products and sums, the definition is written assuming `base`, `exponent`, `exponentiation?` and `make-exponentiation` are defined. The next step is to actually write them! (check dataRep.rkt :wink:)
+Like products and sums, the definition is written assuming `base`, `exponent`, `exponentiation?` and `make-exponentiation` are defined. The next step is to actually write them! (check ![/dataRenp.rkt]dataRep.rkt :wink:)
 
 ## Infix notation
