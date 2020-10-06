@@ -56,3 +56,11 @@ The final procedure:
 The important idea is that we have encapsulated all these rules without bothering about the representation of algebraic expressions and built a procedure by esssentially assuming we have procedures like (sum?), (same-variable?), (product?) etc. Once these rules are decided, we figure out the representation of the expressions.
 
 ## Representing expressions
+The encapsulated rules are embedded in the language we're using - Racket. We take advantage of this fact:
+* Expressions in (Lisp & Scheme &) Racket are written using **list structure.** We can exploit the properties of this structure to represent algebraic expressions for the differentiator.
+* Quotation is a feature which can be used to quote a data object and refer to it as a syntactic entity rather than semantic. It also allows us to type in compound objects.
+
+Since, Racket uses parenthesized prefix notation for combinations. Therefore, we define the following constructors, selectors and predicates:
+```
+
+```
