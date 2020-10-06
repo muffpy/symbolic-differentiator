@@ -96,4 +96,4 @@ While making a sum, that if both summands are numbers, make-sum will add them an
 `make-product` is also defined accordingly. Both use `=number?` which checks if the expression is equal to a given number and is defined in dataRep.rkt
 
 ## Handling exponenets
-<img src="https://render.githubusercontent.com/render/math?math=\frac{d(u^n)}{dx} = nu^{n-1}\frac{du}{dx}" width=100 height=100>
+<img src="CodeCogsEqn.gif">
