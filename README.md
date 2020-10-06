@@ -96,4 +96,7 @@ While making a sum, that if both summands are numbers, make-sum will add them an
 `make-product` is also defined accordingly. Both use `=number?` which checks if the expression is equal to a given number and is defined in dataRep.rkt
 
 ## Handling exponenets
+To extend  the differentiator to handle more rules such as the power rule: 
 <img src="CodeCogsEqn.gif">
+We define more interface procedures :smile:
+As apparent from the equation above, the expression is a reduction into a product and can therefore be defined recursively - 
