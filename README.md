@@ -92,20 +92,8 @@ While making a sum, that if both summands are numbers, make-sum will add them an
               ((and (number? a1) (number? a2))
                (+ a1 a2))
               (else (list '+ a1 a2))))
-
 ```
-
-Similarly, we will change make-product to build in the rules that `0 times $x = 0` and `1 times $x = x`:
-```
-(define (make-product m1 m2)
-        (cond ((or (=number? m1 0) (=number? m2 0)) 0)
-              ((=number? m1 1) m2)
-              ((=number? m2 1) m1)
-              ((and (number? m1) (number? m2)) (* m1 m2))
-              (else (list '* m1 m2))))
-
-```
-Both use `=number?` which checks if the expression is equal to a given number and is defined in dataRep.rkt
+`make-product` is also defined accordingly. Both use `=number?` which checks if the expression is equal to a given number and is defined in dataRep.rkt
 
 ## Handling exponenets
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
