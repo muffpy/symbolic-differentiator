@@ -60,8 +60,10 @@ The encapsulated rules are embedded in the language we're using - Racket. We tak
 * Expressions in (Lisp & Scheme &) Racket are written using **list structure.** We can exploit the properties of this structure to represent algebraic expressions for the differentiator.
 * Quotation is a feature which can be used to quote a data object and refer to it as a syntactic entity rather than semantic. It also allows us to type in compound objects.
 
-Racket uses parenthesized prefix notation for combinations, example `(+ (* x y) z) `. This lets us define constructors, selectors and predicates like:
+Racket uses parenthesized prefix notation for combinations, example `(+ (* x y) z) `. This lets us define constructors, selectors and predicates like for products:
 ```
-
+(define (product? x) (and (pair? x) (eq? (car x) '*)))
+(define (multiplier p) (cadr p))
+(define (multiplicand p) (caddr p))
 ```
 The rest of them are in dataRep.rkt
