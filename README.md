@@ -69,6 +69,7 @@ Racket uses parenthesized prefix notation for combinations, example `(+ (* x y) 
 The rest of them are in [dataRep.rkt](dataRep.rkt)
 
 ---------------------------------------------------
+# Optimization
 
 ## Efficient construction
 Looking at the behaviour of `deriv`:
