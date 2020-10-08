@@ -18,7 +18,7 @@ are to be represented.
 
 The following reduction rules can be applied to differentiate any algebraic sum or product:
 
-<img src= "diff_rules.png" width=550 height=270>
+<img src= "/img/diff_rules.png" width=550 height=270>
 
 
 > Clearly, the last two rules are **reductions** becuase each derivate produces two more derivatives which can be decomposed into smaller pieces, and thus can be solved by **recursion**.
@@ -109,7 +109,7 @@ While making a sum, that if both summands are numbers, make-sum will add them an
 ## Handling exponenets
 To extend  the differentiator to handle more rules such as the power rule: 
 
-<img src="CodeCogsEqn.gif">
+<img src="/img/CodeCogsEqn.gif">
 
 We define more interface procedures :smile:.
 And as apparent from the equation above, the expression is a reduction into a product and can therefore be defined recursively - 
