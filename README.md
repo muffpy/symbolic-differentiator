@@ -126,3 +126,4 @@ And as apparent from the equation above, the expression is a reduction into a pr
 Like products and sums, the definition is written assuming `base`, `exponent`, `exponentiation?` and `make-exponentiation` are defined. The next step is to actually write them! (check [dataRep.rkt](dataRep.rkt) :wink:)
 
 ## Infix notation
+This is a very well-known (plus lengthy) program which deserves a seperate repo to explain fully : https://github.com/muffpy/prefix-to-infix-scheme
