@@ -1,4 +1,11 @@
-* [Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
+- [Symbolic Differentiator](#symbolic-differentiator)
+  - [Differentiation with abstract data](#differentiation-with-abstract-data)
+    - [Writing the `deriv` procedure](#writing-the-deriv-procedure)
+  - [Representing expressions](#representing-expressions)
+- [Optimization](#optimization)
+  - [Efficient construction](#efficient-construction)
+  - [Handling exponenets](#handling-exponenets)
+  - [Infix notation](#infix-notation)* [Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
        * [Writing the `deriv` procedure](###Writing-the-`deriv`-procedure)
 
 # Symbolic Differentiator
