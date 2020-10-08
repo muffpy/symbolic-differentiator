@@ -1,4 +1,4 @@
-[Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
+[Differentiation with abstract data](#Differentiation%20with%20abstract%20data)
 
 
 # Symbolic Differentiator
