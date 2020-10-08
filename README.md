@@ -1,16 +1,16 @@
+# Symbolic Differentiator
+An implementation of Differential Calculus to illustrate symbol manipulation and data abstraction.
+
+# Table of contents
 - [Symbolic Differentiator](#symbolic-differentiator)
+- [Table of contents](#table-of-contents)
   - [Differentiation with abstract data](#differentiation-with-abstract-data)
     - [Writing the `deriv` procedure](#writing-the-deriv-procedure)
   - [Representing expressions](#representing-expressions)
 - [Optimization](#optimization)
   - [Efficient construction](#efficient-construction)
   - [Handling exponenets](#handling-exponenets)
-  - [Infix notation](#infix-notation)* [Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
-       * [Writing the `deriv` procedure](###Writing-the-`deriv`-procedure)
-
-# Symbolic Differentiator
-
-An implementation of Differential Calculus to illustrate symbol manipulation and data abstraction.
+  - [Infix notation](#infix-notation)
 
 ## Differentiation with abstract data
 We first define a differentiation algorithm that operates on abstract objects such as “sums,” “products,” and “variables” without worrying about how these
