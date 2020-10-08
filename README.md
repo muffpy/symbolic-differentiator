@@ -1,3 +1,6 @@
+[Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
+
+
 # Symbolic Differentiator
 
 An implementation of Differential Calculus to illustrate symbol manipulation and data abstraction.
