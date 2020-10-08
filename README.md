@@ -4,9 +4,9 @@ An implementation of Differential Calculus to illustrate symbol manipulation and
 # Table of contents
 - [Symbolic Differentiator](#symbolic-differentiator)
 - [Table of contents](#table-of-contents)
-  - [Differentiation with abstract data](#differentiation-with-abstract-data)
-    - [Writing the `deriv` procedure](#writing-the-deriv-procedure)
-  - [Representing expressions](#representing-expressions)
+- [Differentiation with abstract data](#differentiation-with-abstract-data)
+  - [Writing the `deriv` procedure](#writing-the-deriv-procedure)
+- [Representing expressions](#representing-expressions)
 - [Optimization](#optimization)
   - [Efficient construction](#efficient-construction)
   - [Handling exponenets](#handling-exponenets)
