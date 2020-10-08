@@ -1,5 +1,5 @@
-[Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
-
+- [Differentiation with abstract data](##Differentiation%20with%20abstract%20data)
+       - [Writing the `deriv` procedure](###Writing-the-`deriv`-procedure)
 
 # Symbolic Differentiator
 
